@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resimli Kaydırma</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            height: 100vh;
+            margin-top: 60px; /* H1'in altına boşluk bırakmak için */
+        }
+
+        .scroll-item {
+            display: flex;
+            align-items: center;
+            scroll-snap-align: start;
+            flex: 0 0 100%;
+            padding: 20px;
+        }
+
+        .scroll-item img {
+            width: 50%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .scroll-item .info {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Başlık</h1>
+
+    <div class="scroll-container">
+        <div class="scroll-item">
+            <img src="image_0.png" alt="Resim 1">
+            <div class="info">
+                <h3>Bilgi 1</h3>
+                <p>Resim 1 hakkında küçük bilgiler.</p>
+            </div>
+        </div>
+        <div class="scroll-item">
+            <img src="image_1.png" alt="Resim 2">
+            <div class="info">
+                <h3>Bilgi 2</h3>
+                <p>Resim 2 hakkında küçük bilgiler.</p>
+            </div>
+        </div>
+        <div class="scroll-item">
+            <img src="image_2.png" alt="Resim 3">
+            <div class="info">
+                <h3>Bilgi 3</h3>
+                <p>Resim 3 hakkında küçük bilgiler.</p>
+            </div>
+        </div>
+        <div class="scroll-item">
+            <img src="image_3.png" alt="Resim 4">
+            <div class="info">
+                <h3>Bilgi 4</h3>
+                <p>Resim 4 hakkında küçük bilgiler.</p>
+            </div>
+        </div>
+        <div class="scroll-item">
+            <img src="image_4.png" alt="Resim 5">
+            <div class="info">
+                <h3>Bilgi 5</h3>
+                <p>Resim 5 hakkında küçük bilgiler.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

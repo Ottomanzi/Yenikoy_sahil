@@ -7,199 +7,106 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fff; color: #1a1a1a; line-height: 1.8; }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.8;
-        }
-
-        /* Beyaz ve Modern Başlık */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(15px);
-            padding: 25px 5%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            text-align: center;
+            position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px); padding: 25px; z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05); text-align: center;
         }
 
-        header h1 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
+        header h1 { font-size: 1.1rem; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; }
 
-        /* İçerik Düzeni */
-        main {
-            margin-top: 150px;
-            padding-bottom: 100px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        main { margin-top: 150px; padding-bottom: 100px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         .section-row {
-            display: flex;
-            align-items: center;
-            flex-direction: row-reverse; /* Resim sağda, yazı solda */
-            margin-bottom: 120px;
-            gap: 60px;
+            display: flex; align-items: center; flex-direction: row-reverse;
+            margin-bottom: 100px; gap: 50px;
         }
 
-        /* Resim Alanı */
-        .image-box {
-            flex: 1.2;
-        }
-
+        .image-box { flex: 1.2; }
         .image-box img {
-            width: 100%;
-            height: auto;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.15);
-            display: block;
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%; height: auto; border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: block;
         }
 
-        .image-box img:hover {
-            transform: scale(1.04) translateY(-10px);
-        }
+        .text-box { flex: 1; }
+        .text-box span { color: #3498db; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .text-box h2 { font-size: 2.2rem; font-weight: 800; margin: 10px 0; }
+        .text-box p { color: #555; font-size: 1.05rem; }
 
-        /* Yazı Alanı */
-        .text-box {
-            flex: 1;
-        }
-
-        .text-box .category {
-            color: #007AFF;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .text-box h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: #000;
-        }
-
-        .text-box p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        /* Mobil Ayarlar */
         @media (max-width: 850px) {
-            .section-row {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 30px;
-            }
-            .text-box h2 {
-                font-size: 1.8rem;
-            }
+            .section-row { flex-direction: column-reverse; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>YENİKÖY SAHİL</h1>
-    </header>
+    <header><h1>Yeniköy Sahil</h1></header>
 
     <main>
         <div class="container">
-
-            <!-- 1. Resim -->
+            <!-- 1. BÖLÜM -->
             <section class="section-row">
-                <div class="image-box">
-                    <img src="resim1.png" alt="Yeniköy Sahil 1">
-                </div>
+                <div class="image-box"><img src="resim1.png" alt="Mimari Yol"></div>
                 <div class="text-box">
-                    <span class="category">Millet Bahçesi</span>
-                    <h2>Geometrik Düzen</h2>
-                    <p>Modern peyzajın doğayla buluştuğu, Yeniköy sahilinin en ferah dinlenme noktalarından biri.</p>
+                    <span>Mimari Tasarım</span>
+                    <h2>Geleceğe Uzanan Yol</h2>
+                    <p>Işıklı kemerlerin altından geçen bu yürüyüş parkuru, şehrin modern yüzünü yansıtıyor.</p>
                 </div>
             </section>
 
-            <!-- 2. Resim -->
+            <!-- 2. BÖLÜM -->
             <section class="section-row">
-                <div class="image-box">
-                    <img src="resim2.png" alt="Yeniköy Sahil 2">
-                </div>
+                <div class="image-box"><img src="resim2.png" alt="Sahil Manzarası"></div>
                 <div class="text-box">
-                    <span class="category">Mimari</span>
-                    <h2>Işıklı Yolculuk</h2>
-                    <p>Modern aydınlatma tasarımları, gece yürüyüşlerini estetik bir deneyime dönüştürüyor.</p>
+                    <span>Kentsel Yaşam</span>
+                    <h2>Deniz Esintisi</h2>
+                    <p>Sahil boyunca uzanan yeşil alanlar ve temiz hava, kentsel yorgunluğu unutturuyor.</p>
                 </div>
             </section>
 
-            <!-- 3. Resim -->
+            <!-- 3. BÖLÜM (Görünen resim buydu, uzantısını png yaptım) -->
             <section class="section-row">
-                <div class="image-box">
-                    <img src="resim3.png" alt="Yeniköy Sahil 3">
-                </div>
+                <div class="image-box"><img src="resim3.png" alt="Sessiz Kıyılar"></div>
                 <div class="text-box">
-                    <span class="category">Kentsel Yaşam</span>
-                    <h2>Mavi ve Yeşil</h2>
-                    <p>Şehrin kalbinde, denizin huzuru ile parkın canlılığını birleştiren benzersiz bir lokasyon.</p>
+                    <span>Doğa ve Huzur</span>
+                    <h2>Sessiz Kıyılar</h2>
+                    <p>Dalgaların sesi eşliğinde gün batımını izleyebileceğiniz saklı bir köşe.</p>
                 </div>
             </section>
 
-            <!-- 4. Resim -->
+            <!-- 4. BÖLÜM -->
             <section class="section-row">
-                <div class="image-box">
-                    <img src="resim4.png" alt="Yeniköy Sahil 4">
-                </div>
+                <div class="image-box"><img src="resim4.png" alt="Peyzaj"></div>
                 <div class="text-box">
-                    <span class="category">Atmosfer</span>
-                    <h2>Sakinliğin Rengi</h2>
-                    <p>Gün batımında Yeniköy sahilinde huzuru hissetmek için tasarlanmış doğal bir durak.</p>
+                    <span>Peyzaj Sanatı</span>
+                    <h2>Çiçek Bahçeleri</h2>
+                    <p>Beton yığınları arasında nefes alan renkli adacıklar oluşturan tasarımlar.</p>
                 </div>
             </section>
 
-            <!-- 5. Resim -->
+            <!-- 5. BÖLÜM -->
             <section class="section-row">
-                <div class="image-box">
-                    <img src="resim5.png" alt="Yeniköy Sahil 5">
-                </div>
+                <div class="image-box"><img src="resim5.png" alt="Sahil Yolu"></div>
                 <div class="text-box">
-                    <span class="category">Rekreasyon</span>
-                    <h2>Yürüyüş Patikası</h2>
-                    <p>Spor ve sağlıklı yaşam için dizayn edilmiş, denize paralel uzanan kusursuz bir rota.</p>
+                    <span>Rekreasyon</span>
+                    <h2>Sahil Patikası</h2>
+                    <p>Sabah koşuları için ideal, denize paralel uzanan eşsiz bir yolculuk.</p>
                 </div>
             </section>
 
-            <!-- 6. Resim -->
-            <section class="section-row">
-                <div class="image-box">
-                    <img src="resim6.png" alt="Yeniköy Sahil 6">
-                </div>
+             <!-- 6. BÖLÜM -->
+             <section class="section-row">
+                <div class="image-box"><img src="resim6.png" alt="Genel Bakış"></div>
                 <div class="text-box">
-                    <span class="category">Peyzaj</span>
-                    <h2>Renkli Bahçeler</h2>
-                    <p>Her mevsim ayrı bir renk sunan bitki örtüsü ile şehre nefes aldıran estetik dokunuşlar.</p>
+                    <span>Şehir</span>
+                    <h2>Yeniköy'ün Kalbi</h2>
+                    <p>Modern şehir planlamasının en taze ve huzurlu örneklerinden biri.</p>
                 </div>
             </section>
-
         </div>
     </main>
 

@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnavutköy Yeniköy Sahili</title>
+    <title>Yeniköy Sahil | Şehir Keşifleri</title>
     <style>
-        /* Modern Font ve Reset */
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
         * {
             margin: 0;
@@ -15,110 +14,115 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #fafafa;
-            color: #1a1a1a;
-            line-height: 1.7;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #222;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Sabit Beyaz Başlık */
+        /* Sabit Modern Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #ffffff;
-            padding: 25px 8%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid #eee;
         }
 
         header h1 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 800;
-            letter-spacing: 3px;
-            color: #000;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
         /* İçerik Alanı */
         main {
-            max-width: 1200px;
-            margin: 150px auto 100px; /* Başlıktan aşağıda başla */
-            padding: 0 5%;
+            margin-top: 120px; /* Header boşluğu */
+            padding-bottom: 100px;
         }
 
-        .section-item {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Modern Row Yapısı */
+        .row {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 120px; /* Bölümler arası geniş boşluk */
+            margin-bottom: 120px;
             gap: 60px;
         }
 
-        /* Metin Alanı (Sol) */
-        .info-side {
+        /* Resimler Her Zaman Sağda */
+        .row {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
             flex: 1;
         }
 
-        .info-side .tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
+        .text-content span {
             color: #3498db;
-            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .info-side h2 {
-            font-size: 2.2rem;
+        .text-content h2 {
+            font-size: 2.5rem;
+            margin: 15px 0;
             font-weight: 800;
-            margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .info-side p {
-            font-size: 1.05rem;
+        .text-content p {
+            font-size: 1.1rem;
             color: #666;
-            max-width: 450px;
+            max-width: 500px;
         }
 
-        /* Resim Alanı (Sağ) */
-        .image-side {
-            flex: 1.2; /* Resim biraz daha geniş durabilir */
-            position: relative;
+        .image-content {
+            flex: 1.2;
         }
 
-        .image-side img {
+        .image-content img {
             width: 100%;
             height: auto;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             display: block;
             transition: transform 0.4s ease;
         }
 
-        /* Hafif hover efekti */
-        .section-item:hover .image-side img {
-            transform: translateY(-10px);
+        .image-content img:hover {
+            transform: scale(1.02);
         }
 
-        /* Mobil Düzenleme */
-        @media (max-width: 900px) {
-            .section-item {
-                flex-direction: column-reverse; /* Mobilde resim üste gelsin */
+        /* Mobil Uyumluluk */
+        @media (max-width: 850px) {
+            .row {
+                flex-direction: column-reverse;
                 text-align: center;
+                margin-bottom: 80px;
                 gap: 30px;
             }
-            .info-side p {
+            .text-content p {
                 margin: 0 auto;
             }
-            header {
-                padding: 20px;
-                justify-content: center;
+            .text-content h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -130,59 +134,80 @@
     </header>
 
     <main>
-        <div class="section-item">
-            <div class="info-side">
-                <span class="tag">Mimari Tasarım</span>
-                <h2>Geleceğe Uzanan Yol</h2>
-                <p>Işıklı kemerlerin altından geçen bu yürüyüş parkuru, şehrin modern yüzünü ve estetik anlayışını yansıtıyor.</p>
-            </div>
-            <div class="image-side">
-                <img src="resim2.jpg" alt="Mimari Yol">
-            </div>
-        </div>
+        <div class="container">
 
-        <div class="section-item">
-            <div class="info-side">
-                <span class="tag">Kentsel Yaşam</span>
-                <h2>Deniz Esintisi</h2>
-                <p>Sahil boyunca uzanan yeşil alanlar ve temiz hava, kentsel yaşamın yorgunluğunu unutturan bir huzur sunuyor.</p>
-            </div>
-            <div class="image-side">
-                <img src="resim3.jpg" alt="Sahil Manzarası">
-            </div>
-        </div>
+            <!-- Blok 1 -->
+            <section class="row">
+                <div class="image-content">
+                    <img src="resim1.jpg" alt="Park">
+                </div>
+                <div class="text-content">
+                    <span>Millet Bahçesi</span>
+                    <h2>Geometrik Estetik</h2>
+                    <p>Modern peyzaj tasarımıyla kurgulanmış, huzur dolu bir dinlenme ve nefes alma alanı.</p>
+                </div>
+            </section>
 
-        <div class="section-item">
-            <div class="info-side">
-                <span class="tag">Doğa ve Huzur</span>
-                <h2>Sessiz Kıyılar</h2>
-                <p>Dalgaların sesi eşliğinde gün batımını izleyebileceğiniz, şehrin gürültüsünden uzak saklı bir köşe.</p>
-            </div>
-            <div class="image-side">
-                <img src="resim4.png" alt="Gün Batımı">
-            </div>
-        </div>
+            <!-- Blok 2 -->
+            <section class="row">
+                <div class="image-content">
+                    <img src="resim2.jpg" alt="Işıklı Yol">
+                </div>
+                <div class="text-content">
+                    <span>Mimari Tasarım</span>
+                    <h2>Işıklı Koridor</h2>
+                    <p>Geceyi aydınlatan fütüristik kemerler, sahil yürüyüşünü sanatsal bir yolculuğa çeviriyor.</p>
+                </div>
+            </section>
 
-        <div class="section-item">
-            <div class="info-side">
-                <span class="tag">Peyzaj Sanatı</span>
-                <h2>Çiçek Bahçeleri</h2>
-                <p>Özenle hazırlanmış peyzaj düzenlemeleri, beton yığınları arasında nefes alan renkli adacıklar oluşturuyor.</p>
-            </div>
-            <div class="image-side">
-                <img src="resim6.jpg" alt="Peyzaj">
-            </div>
-        </div>
+            <!-- Blok 3 -->
+            <section class="row">
+                <div class="image-content">
+                    <img src="resim3.jpg" alt="Sahil">
+                </div>
+                <div class="text-content">
+                    <span>Kentsel Yaşam</span>
+                    <h2>Deniz Kıyısı</h2>
+                    <p>Mavinin her tonunu görebileceğiniz, şehrin içinde ama karmaşadan uzak bir sahil rotası.</p>
+                </div>
+            </section>
 
-        <div class="section-item">
-            <div class="info-side">
-                <span class="tag">Rekreasyon</span>
-                <h2>Sahil Patikası</h2>
-                <p>Uzun yürüyüşler ve sabah koşuları için ideal olan bu rota, denize paralel uzanan eşsiz bir yolculuk vaat ediyor.</p>
-            </div>
-            <div class="image-side">
-                <img src="resim5.jpg" alt="Sahil Yolu">
-            </div>
+            <!-- Blok 4 -->
+            <section class="row">
+                <div class="image-content">
+                    <img src="resim4.png" alt="Gün Batımı">
+                </div>
+                <div class="text-content">
+                    <span>Atmosfer</span>
+                    <h2>Sessizliğin Rengi</h2>
+                    <p>Dalga sesleri eşliğinde, günün yorgunluğunu atan eşsiz bir manzara keyfi.</p>
+                </div>
+            </section>
+
+            <!-- Blok 5 -->
+            <section class="row">
+                <div class="image-content">
+                    <img src="resim5.jpg" alt="Yürüyüş Yolu">
+                </div>
+                <div class="text-content">
+                    <span>Rekreasyon</span>
+                    <h2>Sonsuz Patika</h2>
+                    <p>Modern şehir planlamasının en güzel örneklerinden biri olan bu yol, spor tutkunlarını bekliyor.</p>
+                </div>
+            </section>
+
+            <!-- Blok 6 -->
+            <section class="row">
+                <div class="image-content">
+                    <img src="resim6.jpg" alt="Park Alanı">
+                </div>
+                <div class="text-content">
+                    <span>Peyzaj Sanatı</span>
+                    <h2>Çiçek Bahçeleri</h2>
+                    <p>Doğanın renklerini şehir estetiğiyle buluşturan, her köşesi ayrı bir detay barındıran bahçeler.</p>
+                </div>
+            </section>
+
         </div>
     </main>
 
